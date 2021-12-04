@@ -24,7 +24,7 @@
 	--very-dark-cyan: hsl(183, 100%, 15%);
 	--dark-grayish-cyan: hsl(185, 72%, 23%);
 	--medium-grayish-cyan: hsl(184, 14%, 56%);
-	--very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--very-light-grayish-cyan: hsl(180, 54%, 97%);
 	--white: hsl(0, 0%, 100%);
 }
 
@@ -45,5 +45,74 @@ h1 {
 }
 
 main {
-  background-color: var(--white);
+	background-color: var(--white);
+}
+
+label,
+p,
+input.tip {
+	color: var(--dark-grayish-cyan);
+}
+
+input,
+input.tip {
+	background-color: var(--very-light-grayish-cyan);
+}
+
+input:hover,
+input.tip:hover {
+	background-color: var(--medium-grayish-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.tip,
+.reset {
+	height: 2.4em;
+	width: 47%;
+	color: var(--white);
+	background-color: var(--very-dark-cyan);
+	border-radius: 0.25rem;
+	border-style: none;
+	font-weight: bold;
+	font-size: 1.4rem;
+	margin-bottom: 0.5em;
+}
+
+.reset {
+	background-color: var(--strong-cyan);
+	color: var(--very-dark-cyan);
+	width: 100%;
+}
+
+.tip.active {
+	background-color: var(--strong-cyan);
+	color: var(--very-dark-cyan);
+}
+
+.tip:hover {
+	background-color: var(--strong-cyan);
+	color: var(--very-dark-cyan);
+}
+
+.reset:hover {
+	background-color: var(--light-grayish-cyan);
+}
+
+.results {
+	background-color: var(--very-dark-cyan);
+}
+
+.sum {
+	color: var(--strong-cyan);
 }
